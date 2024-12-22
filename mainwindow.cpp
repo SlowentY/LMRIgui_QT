@@ -96,9 +96,9 @@ int MainWindow::runButtonPress()
 
     if(!warn)
     {
-        QProgressDialog progress("Running program...", "Abort", 0, 100, this);
-        progress.setWindowModality(Qt::WindowModal);
-        progress.setValue(0);
+        //QProgressDialog progress("Running program...", "Abort", 0, 100, this);
+        //progress.setWindowModality(Qt::WindowModal);
+        //progress.setValue(0);
 
         if(ui->SyncDebugModeCheck->isChecked())
         {
@@ -158,7 +158,7 @@ int MainWindow::runButtonPress()
             QMessageBox::critical(this, tr("LMRIgui App"), tr("No connection to serial port in Sync.exe!"));
         }
 
-        progress.setValue(12);
+        //progress.setValue(12);
 
         //QMessageBox::information(this, tr("LMRIgui App"), tr("Sync finished!"));
 
@@ -197,7 +197,7 @@ int MainWindow::runButtonPress()
             syncport->close();
         }
 
-        progress.setValue(25);
+        //progress.setValue(25);
 
         graproc.start(QDir::currentPath() + QString("\\UDP_test.exe"), graargs);
 
@@ -214,7 +214,7 @@ int MainWindow::runButtonPress()
         }
 
         graproc.close();
-        progress.setValue(50);
+        //progress.setValue(50);
 
 
         picoproc.start(QDir::currentPath() + QString("\\pico_test_00.exe"), picoargs);
@@ -226,7 +226,7 @@ int MainWindow::runButtonPress()
         }
 
         delay(3000);
-        progress.setValue(75);
+        //progress.setValue(75);
 
         hackrfproc.start(QDir::currentPath() + QString("\\hackrftrans00.exe"), hackrfargs);
 
