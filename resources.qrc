@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>30685.jpg</file>
+        <file>image.png</file>
+    </qresource>
+</RCC>
